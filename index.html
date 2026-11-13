@@ -628,6 +628,21 @@
             gap: 20px;
         }
 
+        @media (max-width: 860px) {
+            .hero-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-block: 80px;
+            }
+
+            .profile-card {
+                width: min(100%, 440px);
+            }
+        }
+
         @media (max-width: 720px) {
             .container {
                 width: min(var(--max-width), calc(100% - 36px));
@@ -649,17 +664,8 @@
                 display: none;
             }
 
-            .hero {
-                min-height: 520px;
-                padding-block: 80px;
-            }
-
-            .hero-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-card {
-                width: min(100%, 440px);
+            .hero h1 {
+                font-size: clamp(2.55rem, 9vw, 4rem);
             }
 
             section {
@@ -693,6 +699,10 @@
                 flex-direction: column;
                 padding: 25px;
             }
+
+            .social-links {
+                gap: 8px;
+            }
         }
 
         @media (max-width: 420px) {
@@ -700,21 +710,103 @@
                 width: calc(100% - 28px);
             }
 
-            .nav-links {
+            .nav {
+                min-height: 64px;
                 gap: 10px;
             }
 
+            .brand {
+                font-size: 0.9rem;
+                white-space: nowrap;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-links a {
+                font-size: 0.76rem;
+            }
+
             .nav-links .nav-cta {
-                padding: 8px 11px;
+                padding: 7px 9px;
+                white-space: nowrap;
+            }
+
+            .hero {
+                padding-block: 64px;
+            }
+
+            .hero-layout {
+                gap: 34px;
+            }
+
+            .profile-details {
+                padding-right: 18px;
+                padding-left: 18px;
+            }
+
+            .profile-avatar {
+                left: 18px;
+            }
+
+            .button-row .button {
+                width: 100%;
+            }
+
+            .section-heading h2,
+            .about h2 {
+                overflow-wrap: anywhere;
             }
 
             .project-card {
                 padding: 21px;
             }
 
+            .project-meta {
+                gap: 8px;
+                font-size: 0.72rem;
+            }
+
+            .project-card h3 {
+                overflow-wrap: anywhere;
+            }
+
+            .social-links {
+                gap: 8px;
+            }
+
+            .social-link {
+                min-height: 40px;
+                padding: 8px 11px;
+                font-size: 0.8rem;
+            }
+
+            .cv-preview {
+                min-height: 360px;
+            }
+
             .footer-content {
                 flex-direction: column;
                 gap: 5px;
+            }
+        }
+
+        @media (max-width: 340px) {
+            .nav-links a:first-child {
+                display: none;
+            }
+
+            .nav {
+                gap: 6px;
+            }
+
+            .container {
+                width: calc(100% - 24px);
+            }
+
+            .project-card {
+                padding: 17px;
             }
         }
 
@@ -756,7 +848,7 @@
                     </p>
                     <div class="button-row">
                         <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">&nbsp;↘</span></a>
-                        <a class="button button-secondary" href="cv.pdf" download>Download my CV <span aria-hidden="true">&nbsp;↓</span></a>
+                        <a class="button button-secondary" href="Igwe%20Onuabuchi%20Fidelis%20CV%20(3).pdf" download="Igwe Onuabuchi Fidelis CV.pdf">Download my CV <span aria-hidden="true">&nbsp;↓</span></a>
                     </div>
                 </div>
                 <aside class="profile-card" aria-label="Onuabuchi Fidelis Igwe profile">
@@ -826,7 +918,7 @@
                             <h3>Portfolio Website</h3>
                             <p>My first portfolio website, created to introduce my work and share my projects.</p>
                             <div class="tags"><span class="tag">Portfolio</span><span class="tag">Personal website</span></div>
-                            <span class="project-link" aria-label="Portfolio website link will be added when it is complete">Portfolio in progress</span>
+                            <a class="project-link" href="https://blueocean-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">View live website <span aria-hidden="true">↗</span></a>
                         </article>
 
                         <article class="project-card">
@@ -935,10 +1027,10 @@
                         <p class="eyebrow">More about my experience</p>
                         <h2>Take a look at my CV.</h2>
                         <p>Preview it here or download a copy to learn more about my experience and skills.</p>
-                        <a class="button button-primary" href="cv.pdf" download>Download CV <span aria-hidden="true">&nbsp;↓</span></a>
+                        <a class="button button-primary" href="Igwe%20Onuabuchi%20Fidelis%20CV%20(3).pdf" download="Igwe Onuabuchi Fidelis CV.pdf">Download CV <span aria-hidden="true">&nbsp;↓</span></a>
                     </div>
-                    <iframe class="cv-preview" src="cv.pdf#toolbar=0" title="CV preview" loading="lazy">
-                        Your browser does not support embedded PDFs. <a href="cv.pdf">Download my CV</a>.
+                    <iframe class="cv-preview" src="Igwe%20Onuabuchi%20Fidelis%20CV%20(3).pdf#toolbar=0" title="CV preview" loading="lazy">
+                        Your browser does not support embedded PDFs. <a href="Igwe%20Onuabuchi%20Fidelis%20CV%20(3).pdf">Download my CV</a>.
                     </iframe>
                 </div>
             </div>
